@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="zh-CN">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Div不固定高度水平垂直居中的6种方法</title>
+	<style>
+		body {
+			padding: 20px 40px;
+			background: url(http://og8z552x2.bkt.clouddn.com/grid.png);
+		}
+
+		div {
+			opacity: 0.8;
+		}
+
+		.styl {
+			width: 100%;
+			height: 300px;
+			background: #ccc;
+			margin: 30px auto;
+			position: relative;
+			border: 1px solid #000;
+		}
+
+		.box {
+			width: 200px;
+			height: 100px;
+			background: #333;
+		}
+
+		.styl1 {
+			width: 1000px;
+			display: table-cell;
+			vertical-align: middle;
+		}
+
+		.styl1 .box {
+			margin: 0 auto;
+		}
+
+		.styl2 .box {
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			margin: -50px 0 0 -100px;
+		}
+
+		.styl3 .box {
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%);
+			-webkit-transform: translate(-50%, -50%);
+		}
+
+		.styl4 .box {
+			position: absolute;
+			margin: auto;
+			left: 0;
+			top: 0;
+			bottom: 0;
+			right: 0;
+		}
+
+		.styl5 {
+			justify-content: center;
+			align-items: center;
+			display: -webkit-flex;
+			display: flex;
+		}
+
+		.styl6 {
+			text-align: center;
+		}
+
+		.styl6:before {
+			content: '';
+			display: inline-block;
+			height: 100%;
+			vertical-align: middle;
+		}
+
+		.styl6 .box {
+			display: inline-block;
+			vertical-align: middle;
+		}
+	</style>
+</head>
+
+<body>
+	<h1>方法一：父标签 table-cell 法</h1>
+	<div class="styl styl1">
+		<div class="box"></div>
+	</div>
+
+	<h1>方法二：常规 position 及子元素偏移方法</h1>
+	<div class="styl styl2">
+		<div class="box"></div>
+	</div>
+
+<h1>方法三：CSS3新属性 transform 的 translate 方法</h1>
+	<div class="styl styl3">
+		<div class="box"></div>
+	</div>
+
+<h1>方法四：margin:auto 方法</h1>
+	<div class="styl styl4">
+		<div class="box"></div>
+	</div>
+
+<h1>方法五：flex 布局方法</h1>
+	<div class="styl styl5">
+		<div class="box"></div>
+	</div>
+
+<h1>方法六：伪元素 inline-block/vertical-align 方法</h1>
+	<div class="styl styl6">
+		<div class="box"></div>
+	</div>
+
+</body>
+
+</html>
