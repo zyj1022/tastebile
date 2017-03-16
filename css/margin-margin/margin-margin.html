@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CSS中margin边界叠加问题及解决方案</title>
+    <style>
+        body {
+            padding: 20px;
+            background: url(http://og8z552x2.bkt.clouddn.com/grid.png);
+        }
+        
+        div {
+            opacity: 0.6;
+        }
+        
+        h1 {
+            opacity: 0.7;
+            background: #666;
+        }
+        
+        .box11 {
+            height: 100px;
+            background: royalblue;
+            margin: 20px 0;
+        }
+        
+        .box22 {
+            height: 100px;
+            background: rosybrown;
+            margin: 30px 0;
+        }
+        
+        .box33 {
+            background: greenyellow;
+            margin: 30px 0;
+        }
+        
+        .box44 {
+            height: 100px;
+            width: 50%;
+            background: darkred;
+            margin: 40px auto;
+        }
+        
+        .box55 {
+            margin: 30px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>示例一：元素的顶边界与前面元素的底边界发生叠加</h1>
+    <div class="box11"></div>
+    <div class="box22"></div>
+
+    <h1>示例二：元素的顶边界与父元素的顶边界发生叠加</h1>
+    <div class="box11"></div>
+    <div class="box33">
+        <div class="box44"></div>
+    </div>
+
+    <h1>示例三：元素的顶边界与底边界发生叠加</h1>
+    <div class="box11"></div>
+    <div class="box55"></div>
+    <div class="box11"></div>
+
+</body>
+
+</html>
