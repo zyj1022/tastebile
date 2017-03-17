@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="zh-CN">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>圣杯布局和双飞翼布局</title>
+	<style>
+		body{
+		    padding:40px;
+			background: url(http://og8z552x2.bkt.clouddn.com/grid.png);
+		}
+
+		div {
+			opacity: 0.7;
+		}
+
+		h1 {
+			font-size: 30px;
+			background-color: #ccc;
+		}
+		h2 {
+			line-height:100px;
+			background:#8e499c
+		}
+
+		.wrap {
+			zoom: 1;
+			overflow: hidden;
+		}
+
+		.wrap .left {
+			width: 200px;
+			height: 300px;
+			background: #ccc;
+			float: left;
+			margin-left: -100%;
+		}
+
+		.wrap .right {
+			width: 200px;
+			height: 300px;
+			background: #333;
+			float: left;
+			margin-left: -200px;
+		}
+
+		.wrap .main {
+			width: 100%;
+			height: 300px;
+			background-color: #666;
+			float: left;
+		}
+
+		.wrap .main-content {
+			padding: 0 200px;
+			background: #eee;
+		}
+
+		/* ------ 圣杯布局区 ------ */
+		.container {
+			padding: 0 200px;
+			overflow:hidden;
+			zoom:1;
+		}
+
+		.container .left {
+			width: 200px;
+			height: 300px;
+			background: #ff8d66;
+			float: left;
+			margin-left: -100%;
+			position: relative;
+			left: -200px;
+		}
+
+		.container .right {
+			width: 200px;
+			height: 300px;
+			background: #7ffe8b;
+			float: left;
+			position: relative;
+			left: 200px;
+			margin-left: -200px;
+		}
+
+		.container .main {
+			width: 100%;
+			height: 300px;
+			background-color:#fcf187;
+			float: left;
+			position: relative;
+		}
+
+
+		/* ------ 圣杯布局区-形态二 ------ */
+		.container-2 {
+			padding: 0 200px;
+			overflow:hidden;
+			zoom:1;
+			position: relative;
+		}
+
+		.container-2 .left {
+			width: 200px;
+			height: 300px;
+			background: #ff8d66;
+			position: absolute;
+			left:0;
+
+		}
+
+		.container-2 .right {
+			width: 200px;
+			height: 300px;
+			background: #7ffe8b;
+			position: absolute;
+			right: 0;
+		}
+
+		.container-2 .main {
+			width: 100%;
+			height: 300px;
+			background-color:#fcf187;
+			position: relative;
+			float:left;
+		}
+	</style>
+</head>
+
+<body>
+
+
+
+	<h1>圣杯布局——全部 relative 形态</h1>
+
+	<div class="container">
+		<div class="main">
+			<h2>圣杯布局主内容区</h2>
+		</div>
+		<div class="left">左边栏内容区</div>
+		<div class="right">右边栏内容区</div>
+	</div>
+
+	<h1>圣杯布局——边栏 absolute 形态</h1>
+
+	<div class="container-2">
+		<div class="main">
+			<h2>圣杯布局主内容区</h2>
+		</div>
+		<div class="left">左边栏内容区</div>
+		<div class="right">右边栏内容区</div>
+	</div>
+
+
+	<h1>双飞翼布局</h1>
+	<div class="wrap">
+		<div class="main">
+			<div class="main-content">
+				<h2>双飞翼布局主内容区</h2>
+			</div>
+		</div>
+		<div class="left">左边栏内容区</div>
+		<div class="right">右边栏内容区</div>
+	</div>
+
+
+</body>
+
+</html>
