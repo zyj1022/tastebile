@@ -84,9 +84,9 @@
 }
 ```
 
-### 圣杯布局——全部 relative 形态
+### 圣杯布局——边栏 relative 形态
 
-到了这里，相信你已经知道怎么解决div层叠问题了，没错就是利用 `position` 属性了，给三栏都添加 `position: relative;`,然后左边 `left: -200px`，右边`left: 200px`,
+到了这里，相信你已经知道怎么解决div层叠问题了，没错就是利用 `position` 属性了，给左右栏和父级`container` 都添加 `position: relative;`,然后左边 `left: -200px`，右边`left: 200px`(这里也可以 `right:-200px;`),
 
 这个时候就是最终版了, 别忘记了给外层 `container` 清除浮动。
 
@@ -98,6 +98,7 @@
 	padding: 0 200px;
     overflow:hidden;
 	zoom:1;
+    position: relative; ／* 相对定位 *／
 }
 
 .container .left {
@@ -106,7 +107,7 @@
 	background: #ff8d66;
 	float: left;
 	margin-left: -100%;
-	position: relative;
+	position: relative; ／* 相对定位 *／
 	left: -200px;
 }
 
@@ -115,8 +116,9 @@
 	height: 300px;
 	background: #7ffe8b;
 	float: left;
-	position: relative;
+	position: relative; ／* 相对定位 *／
 	left: 200px;
+    /*right:-200px;*/ /*这里用right偏移方式也可以实现*/
 	margin-left: -200px;
 }
 
@@ -125,14 +127,15 @@
 	height: 300px;
 	background-color:#fcf187;
 	float: left;
-	position: relative;
 }
 ```
 
 ### 圣杯布局——边栏 absolute 形态
 
 等等，到这里还没结束，在上面div层叠状态的时候，利用 `position: relative;` 属性，
-那么你是否想过用 `position: absolute;` 属性呢？事实上这里也可以这么做：
+那么你是否想过用 `position: absolute;` 属性呢？事实上这里也可以这么做,相对于父级 `container-2`,
+只要让左区域 `left:0;`，右区域`right: 0;` 即可：
+
 
 ```
 /* ------ 圣杯布局区 - 形态二 ------ */
