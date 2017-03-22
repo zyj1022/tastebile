@@ -30,16 +30,16 @@
 
 
 - [ ] 字符串的基本操作方法
-- [x] [**js基础之数组操作**](/javascript/base)
+- [x] [**js基础之数组操作**](/javascript/array/base)
 	- [x] 数组的检测方法
 	- [x] ECM3方法
 	- [x] ECM5方法
-- [x] [**js数组常见问题汇总**]()
+- [x] [**js数组常见问题汇总**](/javascritp/issue)
 	- [x] 数组去重
 	- [x] 数组去除指定元素
 	- [x] 数组取最大、最小值
 	- [x] 数组排序方法	
-- [x] [Javascript 面向对象编程](/javascript/oop/js-oop)
+- [x] [Javascript 面向对象编程](/javascript/oop)
 - [ ] 跨越的几种方法
 - [ ] call和apply、bind的用法及区别
 - [ ] 严格模式介绍
