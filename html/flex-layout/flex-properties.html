@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Flex布局详解</title>
+    <style>
+        body {
+            padding: 0 40px;
+            background: url(http://og8z552x2.bkt.clouddn.com/grid.png);
+        }
+
+        div {opacity: 0.8;}
+
+        .flex-wrap {
+          display:flex;
+          padding:10px;
+          background-color:#ccc;
+        }
+        .item {
+          height:50px;
+          line-height:50px;
+          flex: 1;
+          margin:5px;
+          background-color:#000;
+          font-size:30px;
+          text-align: center;
+          color:#fff;
+        }
+
+        .flex-row {
+          flex-direction:row;
+        }
+        .flex-row-reverse {
+          flex-direction:row-reverse;
+        }
+        .flex-column {
+          flex-direction:column;
+        }
+        .flex-column-reverse {
+          flex-direction:column-reverse
+        }
+
+        /*--------flex网格布局------------*/
+
+        .flex-grid {
+          display:flex;
+          padding:10px;
+          background-color:#ccc;
+          justify-content: center;
+          margin-bottom:20px;
+        }
+        .fol-2 {
+          flex:2;
+        }
+        .fol-3 {
+          flex:3;
+        }
+        .fol-4 {
+          flex:4;
+        }
+
+
+    </style>
+</head>
+
+<body>
+  <h1>Flex 布局 容器属性演示</h1>
+  <h2>flex-direction: row </h2>
+  <div class="flex-wrap flex-row">
+     <div class="item">1</div>
+     <div class="item">2</div>
+     <div class="item">3</div>
+     <div class="item">4</div>
+  </div>
+
+  <h2>flex-direction:row-reverse </h2>
+  <div class="flex-wrap flex-row-reverse">
+     <div class="item">1</div>
+     <div class="item">2</div>
+     <div class="item">3</div>
+     <div class="item">4</div>
+  </div>
+
+  <h2>flex-direction:column </h2>
+  <div class="flex-wrap flex-column">
+     <div class="item">1</div>
+     <div class="item">2</div>
+     <div class="item">3</div>
+     <div class="item">4</div>
+  </div>
+
+  <h2>flex-direction:column-reverse </h2>
+  <div class="flex-wrap flex-column-reverse">
+     <div class="item">1</div>
+     <div class="item">2</div>
+     <div class="item">3</div>
+     <div class="item">4</div>
+  </div>
+
+  <h1>Flex 布局实际案例</h1>
+  <h2>网格布局演示</h2>
+  <div class="flex-grid">
+     <div class="item fol-2">1/2</div>
+     <div class="item">2</div>
+     <div class="item">3</div>
+  </div>
+  <div class="flex-grid">
+     <div class="item fol-3">2/3</div>
+     <div class="item">2</div>
+  </div>
+  <div class="flex-grid">
+     <div class="item">1</div>
+     <div class="item fol-3">2</div>
+     <div class="item">3</div>
+     <div class="item">4</div>
+  </div>
+
+
+</body>
+
+</html>

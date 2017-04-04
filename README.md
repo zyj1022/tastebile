@@ -8,7 +8,7 @@
 
 - [x] [div嵌套水平垂直居中方法](http://zyj1022.github.io/posts/frontend/2017/div-center-middle.html)
 - [x] [圣杯与双飞翼布局详解](http://zyj1022.github.io/posts/frontend/2017/div-the-holy-grail.html)
-- [ ] flex布局详解
+- [x] [flex布局详解](./html/flex-layout/)
 - [ ] 响应式布局方法
 
 ## CSS
