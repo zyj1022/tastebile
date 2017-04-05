@@ -41,13 +41,29 @@
 	- [x] 数组取最大、最小值
 	- [x] 数组排序方法
 - [x] [Javascript 面向对象编程](http://zyj1022.github.io/posts/frontend/2017/js-oop.html)
-- [ ] 跨越的几种方法
-- [ ] call和apply、bind的用法及区别
-- [ ] 严格模式介绍
-- [ ] 异步加载js方法
-- [ ] setTimeout,setInterval,requestAnimation之间的区别
-- [ ] 如何实现事件代理
-
+- [x] [**Javascript设计模式相关**]()
+	- [x] [单例模式](http://www.imeetyou.net/posts/frontend/2017/js-dp-singleton.html)	
+	- [x] [策略模式](http://www.imeetyou.net/posts/frontend/2017/js-dp-proxy.html)
+	- [x] [代理模式](http://www.imeetyou.net/posts/frontend/2017/js-dp-strategy.html)
+	- [x] [迭代器模式](http://zyj1022.github.io/posts/frontend/2017/js-dp-strategy.html)
+	- [ ] 发布/订阅模式
+	- [ ] 命令模式
+	- [ ] 组合模式
+	- [ ] 模版方法模式
+	- [ ] 享元模式
+	- [ ] 职责链模式
+	- [ ] 中介者模式
+	- [ ] 装饰者模式
+	- [ ] 状态模式
+	- [ ] 适配器模式
+- [x] js常见问题列表
+	- [ ] 跨越的几种方法
+	- [ ] call和apply、bind的用法及区别
+	- [ ] 严格模式介绍
+	- [ ] 异步加载js方法
+	- [ ] setTimeout,setInterval,requestAnimation之间的区别
+	- [ ] 如何实现事件代理
+	
 
 ## Node
 
