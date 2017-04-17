@@ -20,7 +20,7 @@
 	- [x] [box-sizing属性详解](./css/css-box-model/)
 - [x] [CSS的选择器有哪些](./css/css-selectors/)
 	- [x] [CSS伪类、伪元素用法介绍](./css/css-selectors/)
-- [ ] CSS单位px、pt、em、rem介绍
+- [x] [CSS单位px、pt、em、rem介绍](./css/px-em-rem/)
 - [ ] CSS清除浮动的方法有哪些
 - [ ] Postcss用法
 - [ ] CSS动画
