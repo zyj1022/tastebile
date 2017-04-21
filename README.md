@@ -46,15 +46,15 @@
 	- [x] [单例模式](http://www.imeetyou.net/posts/frontend/2017/js-dp-singleton.html)
 	- [x] [策略模式](http://www.imeetyou.net/posts/frontend/2017/js-dp-proxy.html)
 	- [x] [代理模式](http://www.imeetyou.net/posts/frontend/2017/js-dp-strategy.html)
-	- [x] [迭代器模式](http://zyj1022.github.io/posts/frontend/2017/js-dp-strategy.html)
+	- [x] [迭代器模式](http://www.imeetyou.net/posts/frontend/2017/js-dp-iterator.html)
 	- [x] [发布/订阅模式](http://www.imeetyou.net/posts/frontend/2017/js-dp-publish-subscribe.html)
 	- [ ] 命令模式
 	- [ ] 组合模式
 	- [x] [模版方法模式](http://www.imeetyou.net/posts/frontend/2017/js-dp-template.html)
 	- [x] [享元模式](http://www.imeetyou.net/posts/frontend/2017/js-dp-flyweight.html)
-	- [ ] 职责链模式
-	- [ ] 中介者模式
-	- [ ] 装饰者模式
+	- [x] [职责链模式](./javascript/design-patterns/chain-of-responsibility/)
+	- [x] [中介者模式](http://www.imeetyou.net/posts/frontend/2017/js-dp-mediator.html)
+	- [x] [装饰者模式](http://zyj1022.github.io/posts/frontend/2017/js-dp-decorator.html)
 	- [ ] 状态模式
 	- [ ] 适配器模式
 - [x] js常见问题列表
@@ -63,7 +63,7 @@
 	- [ ] 严格模式介绍
 	- [ ] 异步加载js方法
 	- [ ] setTimeout,setInterval,requestAnimation之间的区别
-	- [ ] 如何实现事件代理
+	- [x] [事件委托或代理详解](./javascript/base/delegation/)
 
 
 ## Node
