@@ -9,7 +9,7 @@
 - [x] [div嵌套水平垂直居中方法](http://zyj1022.github.io/posts/frontend/2017/div-center-middle.html)
 - [x] [圣杯与双飞翼布局详解](http://zyj1022.github.io/posts/frontend/2017/div-the-holy-grail.html)
 - [x] [flex布局详解](./html/flex-layout/)
-- [ ] 响应式布局方法
+- [x] [响应式布局方法](./css/response.md)
 
 ## CSS
 
@@ -56,7 +56,7 @@
 	- [x] [中介者模式](http://www.imeetyou.net/posts/frontend/2017/js-dp-mediator.html)
 	- [x] [装饰者模式](http://zyj1022.github.io/posts/frontend/2017/js-dp-decorator.html)
 	- [ ] 状态模式
-	- [ ] 适配器模式
+	- [x] [适配器模式](http://zyj1022.github.io/posts/frontend/2017/js-dp-adapter.htmlz)
 - [x] js常见问题列表
 	- [x] [跨越的几种方法](./javascript/base/cross-document/)
 	- [x] [call和apply、bind的用法及区别](./javascript/base/call-apply-bind/)
