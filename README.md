@@ -17,7 +17,7 @@
 - [x] [CSS之BFC](http://zyj1022.github.io/posts/frontend/2017/css-bfc.html)
 - [x] [盒模型详解](./css/css-box-model.md)
 	- [x] [CSS中margin边界叠加问题及解决方案](./css/margin-margin/)
-	- [x] [box-sizing属性详解](./css/css-box-model/)
+	- [x] [box-sizing属性详解](./css/css-box-model.md)
 - [x] [CSS的选择器有哪些](./css/css-selectors.md)
 	- [x] [CSS伪类、伪元素用法介绍](./css/css-selectors.md)
 - [x] [CSS单位px、pt、em、rem介绍](./css/px-em-rem.md)
@@ -42,7 +42,7 @@
 	- [x] 数组取最大、最小值
 	- [x] 数组排序方法
 - [x] [Javascript 面向对象编程](http://zyj1022.github.io/posts/frontend/2017/js-oop.html)
-- [x] [**Javascript设计模式相关**]()
+- [x] **Javascript设计模式相关**
 	- [x] [单例模式](http://www.imeetyou.net/posts/frontend/2017/js-dp-singleton.html)
 	- [x] [策略模式](http://www.imeetyou.net/posts/frontend/2017/js-dp-proxy.html)
 	- [x] [代理模式](http://www.imeetyou.net/posts/frontend/2017/js-dp-strategy.html)
