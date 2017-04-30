@@ -60,7 +60,7 @@
 - [x] js常见问题列表
 	- [x] [跨越的几种方法](./javascript/base/cross-document.md)
 	- [x] [call和apply、bind的用法及区别](./javascript/base/call-apply-bind.md)
-	- [ ] 严格模式介绍
+	- [x] [严格模式介绍](./javascript/base/use-strict.md)
 	- [ ] 异步加载js方法
 	- [ ] setTimeout,setInterval,requestAnimation之间的区别
 	- [x] [事件委托或代理详解](./javascript/base/event-delegation.md)
