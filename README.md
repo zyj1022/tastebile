@@ -10,6 +10,8 @@
 - [x] [圣杯与双飞翼布局详解](http://zyj1022.github.io/posts/frontend/2017/div-the-holy-grail.html)
 - [x] [flex布局详解](./html/flex-layout/)
 - [x] [响应式布局方法](./html/response.md)
+- [x] [HTML5本地存储：SessionStorage, LocalStorage, Cookie](.html/session-local-cookie.md)
+- [x] [DOCTYPE的作用：文档类型与浏览器模式](.html/doctype.md)
 
 ## CSS
 
@@ -61,9 +63,9 @@
 	- [x] [跨越的几种方法](./javascript/base/cross-document.md)
 	- [x] [call和apply、bind的用法及区别](./javascript/base/call-apply-bind.md)
 	- [x] [严格模式介绍](./javascript/base/use-strict.md)
-	- [ ] 异步加载js方法
 	- [ ] setTimeout,setInterval,requestAnimation之间的区别
 	- [x] [事件委托或代理详解](./javascript/base/event-delegation.md)
+	- [x] [js中变量类型检测方法](./javascript/base/var-type.md)
 
 
 ## Node
@@ -80,7 +82,13 @@
 
 # 框架部分
 
-……待续
+## Vue2
+
+- [x] Vue 基本使用
+	- [x] [vue-cli 使用指南](./vue2-cli.md)
+	- [x] [vue-router 使用指南](./vue2/vue-router.md)
+	- [x] [vuex 使用指南](./vue2/vuex.md)
+
 
 ## Angular2
 
