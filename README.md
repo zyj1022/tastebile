@@ -85,9 +85,10 @@
 ## Vue2
 
 - [x] Vue 基本使用
-	- [x] [vue-cli 使用指南](./vue2-cli.md)
+	- [x] [vue-cli 使用指南](./vue2/vue-cli.md)
 	- [x] [vue-router 使用指南](./vue2/vue-router.md)
 	- [x] [vuex 使用指南](./vue2/vuex.md)
+	- [x] [vue组件之间如何传值](./vue2/vue-props-emit.md)
 
 
 ## Angular2
