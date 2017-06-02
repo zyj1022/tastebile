@@ -1,4 +1,4 @@
-# Javascript 面向对象编程
+# Javascript 面向对象编程详解
 
 
 Javascript是一种基于对象的语言，秉承一切皆对象的理念。
@@ -37,6 +37,9 @@ lily.speak() // 我的名字是：lily，年龄：25
 
 ```
 
+<!-- more -->
+
+
 # 2、实现构造函数继承的五种方法
 
 举例，有一个水果的构造函数。
@@ -57,9 +60,11 @@ function Apple(name, color) {
 ```
 怎么使得 `Apple` 继承 `Fruit` 呢？
 
-## 第一种，使用call/apply，构造函数绑定
+## 第一种，借用构造函数（经典继承）
 
-如题，使用`call`或`apply`方法，将父对象的构造函数绑定在子对象上，即在子对象构造函数中加一行：
+**使用call/apply，构造函数绑定**，如题，使用`call`或`apply`方法，将父对象的构造函数绑定在子对象上，即在子对象构造函数中加一行
+
+> 基本思想:即在子类型构造函数的内部调用超类型构造函数.
 
 ```
 function Fruit() {
@@ -67,6 +72,7 @@ function Fruit() {
 }
 
 function Apple(name,color) {
+    // 继承了Fruit，且向父类传递参数
 	Fruit.apply(this, arguments); // 这里用call也可以
 	this.name = name;
 	this.color = color;
@@ -74,10 +80,25 @@ function Apple(name,color) {
 
 var a = new Apple("苹果", "红色");
 console.log(a.type) // 水果
+a.type = "南瓜" // 这里修改父类的属性值
+console.log(a.type) // 南瓜
+
+var b = new Apple();
+console.log(b.type); // 水果 可见引用类型值是独立的
 
 ```
 
-## 第二种， 使用prototype属性继承
+在这里，借用构造函数解决了原型链的两个问题：
+
+- 保证了原型链中引用类型值的独立,不再被所有实例共享;
+- 子类型创建时也能够向父类型传递参数.
+
+随之而来的是, 如果仅仅借用构造函数,那么将无法避免构造函数模式存在的问题--方法都在构造函数中定义, 因此函数复用也就不可用了.而且超类型(如Fruit)中定义的方法,对子类型而言也是不可见的. 考虑此,借用构造函数的技术也很少单独使用.
+
+## 第二种，原型prototype继承
+
+
+### 1、使用prototype属性继承
 
 第二种方法比较常见，使用prototype属性。
 
@@ -93,19 +114,24 @@ function Apple(name, color) {
 	this.color = color;
 }
 
-// 将 Apple 的 prototype 对象指向 Fruit实例
-Apple.prototype = new Fruit(); 
+/*
+* 将 Apple 的 prototype 对象指向 Fruit实例，
+* 它相当于完全删除了prototype 对象原先的值，然后赋予一个新值
+*／
+Apple.prototype = new Fruit();
+
 // 将 Apple 的 prototype 对象的构造函数指回原来的构造函数
-Apple.prototype.constructor = Apple; 
+Apple.prototype.constructor = Apple;
 
 var a2 = new Apple("香蕉苹果", "黄色");
 console.log(a2.type) // 水果
 
 ```
 
-## 第三种 直接继承prototype
+### 2、直接继承prototype
 
-第三种方法是对第二种方法的改进。由于Animal对象中，不变的属性都可以直接写入Animal.prototype。所以，我们也可以让Apple()跳过 Fruit()，直接继承Fruit.prototype。
+这里第2种方法是对第1种方法的改进。由于Fruit对象中，不变的属性都可以直接写入Fruit.prototype。
+所以，我们也可以让Apple()跳过 Fruit()，直接继承Fruit.prototype。
 
 ```
 function Fruit() {}
@@ -117,14 +143,14 @@ function Apple(name, color) {
 }
 
 Apple.prototype = Fruit.prototype;
-Apple.prototype.constructor = Apple; // 
+Apple.prototype.constructor = Apple; // 实际上把Fruit.prototype对象的constructor属性也改掉了
 var a2 = new Apple("香蕉苹果", "黄色");
 console.log(a2.type) // 水果
 
 ```
 与前一种方法相比，这样做的优点是效率比较高（不用执行和建立Fruit的实例了），比较省内存。缺点是 `Apple.prototype`和`Fruit.prototype`现在指向了同一个对象，那么任何对`Apple.prototype`的修改，都会反映到`Fruit.prototype`。
 
-所以，上面这一段代码其实是有问题的。请看第二行
+所以，上面这一段代码其实是有问题的。请看这行
 
 ```
 Apple.prototype.constructor = Apple;
@@ -136,9 +162,53 @@ Apple.prototype.constructor = Apple;
 alert(Fruit.prototype.constructor); // Apple
 ```
 
-## 第四种， 利用空对象作为中介
+## 第三种 组合继承
 
-由于"直接继承prototype"存在上述的缺点，所以就有第四种方法，利用一个空对象作为中介
+组合继承, 有时候也叫做伪经典继承,指的是将原型链和借用构造函数的技术组合到一块,从而发挥两者之长的一种继承模式.
+
+> 基本思路: 使用原型链实现对原型属性和方法的继承,通过借用构造函数来实现对实例属性的继承.
+
+这样,既通过在原型上定义方法实现了函数复用,又能保证每个实例都有它自己的属性. 如下.
+
+
+```
+function Fruit() {
+  this.type = '水果';
+}
+Fruit.prototype.getType = function() {
+    console.log(this.type);
+}
+
+function Apple(name,color) {
+	Fruit.apply(this, arguments); // 继承实例属性，第一次调用Fruit，
+    this.name = name;
+	this.color = color;
+}
+
+Apple.prototype = new Fruit(name); // 继承父类方法，第二次调用Fruit
+Apple.prototype.getColor = function() {
+    console.log(this.color)
+}
+
+var ap1 = new Apple("苹果", "红色");
+ap1.type = '红富士'
+ap1.getType(); // '红富士'
+ap1.getColor(); // '红色'
+
+var ap2 = new Apple('香蕉苹果',"黄色")
+console.log(ap2.type); // 水果
+ap2.getType(); // '水果'
+ap2.getColor(); // '红色'
+
+```
+
+组合继承避免了原型链和借用构造函数的缺陷,融合了它们的优点,成为 JavaScript 中**最常用的继承模式**. 而且, `instanceof` 和 `isPrototypeOf()` 也能用于识别基于组合继承创建的对象.
+
+同时我们还注意到组合继承其实调用了两次父类构造函数, 造成了不必要的消耗, 那么怎样才能避免这种不必要的消耗呢?
+
+## 第四种，利用空对象作为中介(寄生组合式继承)
+
+由于前面的 "直接继承prototype" 存在上述的缺点，所以就有第四种方法，利用一个空对象作为中介
 
 ```
 function Fruit() {}
@@ -149,9 +219,9 @@ function Apple(name, color) {
     this.color = color;
 }
 
-var F = function(){};
+var F = function(){}; // F是空对象，所以几乎不占内存
 F.prototype = Fruit.prototype;
-Apple.prototype = new F();
+Apple.prototype = new F(); // 修改Apple的prototype对象，就不会影响到Fruit的prototype对象
 Apple.prototype.constructor = Apple;
 
 var a2 = new Apple("香蕉苹果", "黄色");
@@ -159,14 +229,47 @@ console.log(a2.type) // 水果
 
 ```
 
-##第五种， 拷贝继承
+将上面方法，封装一个函数
+
+```
+function extend(Child, Parent) {
+　　var F = function(){};
+　　F.prototype = Parent.prototype;
+　　Child.prototype = new F();
+　　Child.prototype.constructor = Child;
+　　Child.uber = Parent.prototype;
+}
+```
+
+使用的时候，方法如下:
+
+
+```
+extend(Apple,Fruit)
+var a2 = new Apple("香蕉苹果", "黄色");
+console.log(a2.type) // 水果
+```
+
+这个extend函数，就是YUI库如何实现继承的方法。
+另外，说明一点，函数体最后一行
+
+```
+Child.uber = Parent.prototype;
+```
+意思是为子对象设一个uber属性，这个属性直接指向父对象的prototype属性。（uber是一个德语词，意思是"向上"、"上一层"。）这等于在子对象上打开一条通道，可以直接调用父对象的方法。这一行放在这里，只是为了实现继承的完备性，纯属备用性质。
+
+## 第五种， 拷贝继承
 
 上面是采用prototype对象，实现继承。我们也可以换一种思路，纯粹采用"拷贝"方法实现继承。简单说，如果把父对象的所有属性和方法，拷贝进子对象，不也能够实现继承吗？这样我们就有了第五种方法。
 
-首先，还是把Animal的所有不变属性，都放到它的prototype对象上。
+首先，还是把Fruit的所有不变属性，都放到它的prototype对象上。
 
+```
+function Fruit(){}
+Fruit.prototype.type = "水果";
+```
 
-写一个函数，实现属性拷贝的目的
+然后，写一个函数，实现属性拷贝的目的
 
 ```
 function extend2(Child, Parent) {
@@ -265,6 +368,31 @@ alert(Doctor.nation); //中国
 
 ```
 
+在 ECMAScript5 中,通过新增 object.create() 方法规范化了上面的原型式继承.
+
+object.create() 接收两个参数:
+
+- 一个用作新对象原型的对象
+- (可选的)一个为新对象定义额外属性的对象
+
+```
+var Chinese = {
+　　　nation:'中国'
+};
+
+var Doctor ={
+　　　career:'医生'
+}
+
+var Doctor = Object.create(Chinese);
+
+Doctor.career = '医生';
+
+alert(Doctor.nation); //中国
+```
+`object.create()` 只有一个参数时功能与上述`object`方法相同，目前支持 `Object.create()` 的浏览器有 IE9+, Firefox 4+, Safari 5+, Opera 12+ 和 Chrome.
+
+
 ### 第二种 浅拷贝
 
 除了使用"prototype链"以外，还有另一种思路：把父对象的属性，全部拷贝给子对象，也能实现继承。
@@ -274,7 +402,7 @@ alert(Doctor.nation); //中国
 ```
 function extendCopy(p) {
 　　var c = {};
-　　for (var i in p) { 
+　　for (var i in p) {
 　　　　c[i] = p[i];
 　　}
 　　c.uber = p;
@@ -350,10 +478,16 @@ alert(Chinese.birthPlaces); //北京, 上海, 香港
 
 
 -----
-以上文章内容，转载修改自[阮一峰的网络日志](http://www.ruanyifeng.com/blog/javascript/)，仅作学习总结，原文链接如下：
 
-[Javascript面向对象编程（三）：非构造函数的继承](http://www.ruanyifeng.com/blog/2010/05/object-oriented_javascript_inheritance_continued.html)
+> 以上文章内容，转载修改自[阮一峰的网络日志](http://www.ruanyifeng.com/blog/javascript/)，仅作学习总结，原文链接如下：
+>
+> [Javascript面向对象编程（三）：非构造函数的继承](http://www.ruanyifeng.com/blog/2010/05/object-oriented_javascript_inheritance_continued.html)
+>
+> [Javascript面向对象编程（二）：构造函数的继承](http://www.ruanyifeng.com/blog/2010/05/object-oriented_javascript_inheritance.html)
+>
+> [Javascript 面向对象编程（一）：封装](http://www.ruanyifeng.com/blog/2010/05/object-oriented_javascript_encapsulation.html)
 
-[Javascript面向对象编程（二）：构造函数的继承](http://www.ruanyifeng.com/blog/2010/05/object-oriented_javascript_inheritance.html)
 
-[Javascript 面向对象编程（一）：封装](http://www.ruanyifeng.com/blog/2010/05/object-oriented_javascript_encapsulation.html)
+本文地址: http://zyj1022.github.io/posts/frontend/2017/js-oop.html
+
+转载时必须以链接形式注明原始出处及本声明
