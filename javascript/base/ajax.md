@@ -156,3 +156,74 @@ function encodeFormData(data){
     return pairs.join('&');
 }
 ```
+
+## Ajax 封装
+
+[查看DEMO](./javascript/base/ajax.html)
+
+```
+function ajax(ops) {
+    ops = ops || {}; // 传入方式默认为对象
+    ops.type = (ops.type || "GET").toUpperCase(); // 默认为GET请求
+    ops.dataType = ops.dataType || 'json'; // 返回值类型默认为json
+    ops.async = ops.async || true; // 默认为异步请求
+    var params = getParams(ops.data); // 对需要传入的参数的处理
+    var xhr;
+    if (window.XMLHttpRequest) {
+        xhr = new XMLHttpRequest(); // 创建一个 ajax请求
+    }else{
+        xhr = new ActiveXObject('Microsoft.XMLHTTP')
+    }
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState == 4){
+            var status = xhr.status;
+            if (status >= 200 && status < 300 ){
+                ops.success && ops.success(xhr.responseText, xhr.responseXML);
+            }else{
+                ops.fail && ops.fail(status);
+            }
+        }
+    };
+    if (ops.type === 'GET'){
+        xhr.open("GET",ops.url + '?' + params ,ops.async);
+        xhr.send(null)
+    }else if (ops.type === 'POST'){
+        xhr.open('POST',ops.url,ops.async); // 打开请求
+        xhr.setRequestHeader('Content-Type','application/x-www-form-urlencoded'); // POST请求设置请求头
+        xhr.send(params); // 发送请求参数
+    }
+}
+
+/**
+ * 对象参数的处理
+ * @param data
+ * @returns {string}
+ */
+function getParams(data) {
+    var arr = [];
+    for (var param in data){
+        arr.push(encodeURIComponent(param) + '=' +encodeURIComponent(data[param]));
+    }
+    arr.push(('randomNumber=' + Math.random()).replace('.'));
+    // console.log('getParams',arr.join('&'));
+    return arr.join('&');
+}
+```
+
+**对封装好的ajax请求进行调用**
+
+```
+ajax({
+    url:"https://www.easy-mock.com/mock/5900413f739ac1685205dc45/we/ajax/get", // 请求地址
+    type:'GET',   // 请求方式 
+    data:{ name:'oldman',age :'33'}, // 请求参数
+    dataType:"json",     // 返回值类型的设定
+    async:false,   // 是否异步
+    success:function (res,xml) {
+        console.log(res);   // 此处执行请求成功后的代码
+    },
+    fail:function (status) {
+        console.log('状态码为'+status);   // 此处为执行失败后的代码
+    }
+});
+```
