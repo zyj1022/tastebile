@@ -10,8 +10,8 @@
 - [x] [圣杯与双飞翼布局详解](http://zyj1022.github.io/posts/frontend/2017/div-the-holy-grail.html)
 - [x] [flex布局详解](./html/flex-layout/)
 - [x] [响应式布局方法](./html/response.md)
-- [x] [HTML5本地存储：SessionStorage, LocalStorage, Cookie](.html/session-local-cookie.md)
-- [x] [DOCTYPE的作用：文档类型与浏览器模式](.html/doctype.md)
+- [x] [HTML5本地存储：SessionStorage, LocalStorage, Cookie](./html/session-local-cookie.md)
+- [x] [DOCTYPE的作用：文档类型与浏览器模式](./html/doctype.md)
 
 ## CSS
 
