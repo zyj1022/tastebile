@@ -72,6 +72,7 @@
 	- [x] [前端安全相关问题-XSS-CSRF](./javascript/js-xss-csrf.md)
 	- [ ] [get和post的区别](./javascript/base/get-post.md)
 	- [ ] [ajax请求详解](./javascript/base/ajax.md)
+	- [ ] [深复制与浅复制](./javascript/base/clone.md)
 
 ## Node
 
