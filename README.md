@@ -66,13 +66,13 @@
 	- [x] [跨越的几种方法](./javascript/base/cross-document.md)
 	- [x] [call和apply、bind的用法及区别](./javascript/base/call-apply-bind.md)
 	- [x] [严格模式介绍](./javascript/base/use-strict.md)
-	- [ ] setTimeout,setInterval,requestAnimation之间的区别
+	- [x] [setTimeout,setInterval,requestAnimation之间的区别](./javascript/base/)
 	- [x] [事件委托或代理详解](./javascript/base/event-delegation.md)
 	- [x] [js中变量类型检测方法](./javascript/base/var-type.md)
 	- [x] [前端安全相关问题-XSS-CSRF](./javascript/js-xss-csrf.md)
-	- [ ] [get和post的区别](./javascript/base/get-post.md)
-	- [ ] [ajax请求详解](./javascript/base/ajax.md)
-	- [ ] [深复制与浅复制](./javascript/base/clone.md)
+	- [x] [get和post的区别](./javascript/base/get-post.md)
+	- [x] [ajax请求详解](./javascript/base/ajax.md)
+	- [x] [深复制与浅复制](./javascript/base/clone.md)
 
 ## Node
 
