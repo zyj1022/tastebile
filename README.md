@@ -73,6 +73,8 @@
 	- [x] [get和post的区别](./javascript/base/get-post.md)
 	- [x] [ajax请求详解](./javascript/base/ajax.md)
 	- [x] [深复制与浅复制](./javascript/base/clone.md)
+- [x] js进阶之路
+	- [x] [认识和使用Promise](./javascript/upgrade/promise.md)
 
 ## Node
 
@@ -103,4 +105,6 @@
 
 ## React
 
-……待续
+- [x] [利用create-react-app快速搭建开发环境](./react/create-react-app.md)
+- [ ] react组件和Props传递
+- [ ] react事件处理
