@@ -6,17 +6,18 @@
 
 ## HTML
 - [x] [HTML编码规范](https://github.com/zyj1022/FE-spec/blob/master/html-style-guide.md)
-- [x] [div嵌套水平垂直居中方法](http://zyj1022.github.io/posts/frontend/2017/div-center-middle.html)
-- [x] [圣杯与双飞翼布局详解](http://zyj1022.github.io/posts/frontend/2017/div-the-holy-grail.html)
+- [x] [div嵌套水平垂直居中方法](./html/div-center-middle/README.md)
+- [x] [圣杯与双飞翼布局详解](./html/the-holy-grail/README.md)
 - [x] [flex布局详解](./html/flex-layout/)
 - [x] [响应式布局方法](./html/response.md)
 - [x] [HTML5本地存储：SessionStorage, LocalStorage, Cookie](.html/session-local-cookie.md)
-- [x] [DOCTYPE的作用：文档类型与浏览器模式](.html/doctype.md)
+- [x] [DOCTYPE的作用：文档类型与浏览器模式](./html/doctype.md)
+- [x] [从输入url到页面展示到底发生了什么](./html/url-end.md)
 
 ## CSS
 
 - [x] [CSS通用编码规范](https://github.com/zyj1022/FE-spec/blob/master/css-style-guide.md)
-- [x] [CSS之BFC](http://zyj1022.github.io/posts/frontend/2017/css-bfc.html)
+- [x] [CSS之BFC](./css/bfc/README.md)
 - [x] [盒模型详解](./css/css-box-model.md)
 	- [x] [CSS中margin边界叠加问题及解决方案](./css/margin-margin/)
 	- [x] [box-sizing属性详解](./css/css-box-model.md)
@@ -34,16 +35,18 @@
 
 - [x] [JavaScript编码规范](https://github.com/zyj1022/FE-spec/blob/master/javascript-style-guide.md)
 - [ ] 字符串的基本操作方法
-- [x] [**js基础之数组操作**](http://zyj1022.github.io/posts/frontend/2017/js-array-base.html)
+	- [x] [JS获取URL中参数值（QueryString）的方法](./javascript/base/str-querystring.md)
+	- [x] [对字符串中进行转义的 escapehtml 的函数](./javascript/base/str-escapehtml.md)
+- [x] [**js基础之数组操作**](./javascript/base/array-base.md)
 	- [x] 数组的检测方法
 	- [x] ECM3方法
 	- [x] ECM5方法
-- [x] [**js数组常见问题汇总**](http://zyj1022.github.io/posts/frontend/2017/js-array-issue.html)
+- [x] [**js数组常见问题汇总**](./javascript/base/array-issue.md)
 	- [x] 数组去重
 	- [x] 数组去除指定元素
 	- [x] 数组取最大、最小值
 	- [x] 数组排序方法
-- [x] [Javascript 面向对象编程](http://zyj1022.github.io/posts/frontend/2017/js-oop.html)
+- [x] [Javascript 面向对象编程](./javascript/js-oop.md)
 - [x] **Javascript设计模式相关**
 	- [x] [单例模式](http://www.imeetyou.net/posts/frontend/2017/js-dp-singleton.html)
 	- [x] [策略模式](http://www.imeetyou.net/posts/frontend/2017/js-dp-proxy.html)
@@ -56,9 +59,9 @@
 	- [x] [享元模式](http://www.imeetyou.net/posts/frontend/2017/js-dp-flyweight.html)
 	- [x] [职责链模式](./javascript/design-patterns/chain-of-responsibility/)
 	- [x] [中介者模式](http://www.imeetyou.net/posts/frontend/2017/js-dp-mediator.html)
-	- [x] [装饰者模式](http://zyj1022.github.io/posts/frontend/2017/js-dp-decorator.html)
+	- [x] [装饰者模式](http://www.imeetyou.net/posts/frontend/2017/js-dp-decorator.html)
 	- [ ] 状态模式
-	- [x] [适配器模式](http://zyj1022.github.io/posts/frontend/2017/js-dp-adapter.html)
+	- [x] [适配器模式](http://www.imeetyou.net/posts/frontend/2017/js-dp-adapter.html)
 - [x] js常见问题列表
 	- [x] [跨越的几种方法](./javascript/base/cross-document.md)
 	- [x] [call和apply、bind的用法及区别](./javascript/base/call-apply-bind.md)
