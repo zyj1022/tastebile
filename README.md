@@ -26,7 +26,10 @@
 - [x] [CSS单位px、pt、em、rem介绍](./css/px-em-rem/)
 - [ ] CSS清除浮动的方法有哪些
 - [ ] Postcss用法
-- [ ] CSS动画
+- [x] [CSS图形动画](./css/pretty/css-shape.md)
+	- [x] [纯CSS3绘画之眨眼的螳螂](./css/pretty/css-grasshopper.html)
+	- [x] [纯CSS3绘画之小黄人](./css/pretty/css-minion.html)
+	- [x] [蝙蝠侠LOGO](./css/pretty/css-batman-logo.md)
 - [x] [移动端标签 fixed 的问题](http://www.imeetyou.net/posts/frontend/2017/html-safari-fixed.html)
 
 ## Javascript
@@ -66,11 +69,15 @@
 	- [x] [跨越的几种方法](./javascript/base/cross-document.md)
 	- [x] [call和apply、bind的用法及区别](./javascript/base/call-apply-bind.md)
 	- [x] [严格模式介绍](./javascript/base/use-strict.md)
-	- [ ] setTimeout,setInterval,requestAnimation之间的区别
+	- [x] [setTimeout,setInterval,requestAnimation之间的区别](./javascript/base/)
 	- [x] [事件委托或代理详解](./javascript/base/event-delegation.md)
 	- [x] [js中变量类型检测方法](./javascript/base/var-type.md)
 	- [x] [前端安全相关问题-XSS-CSRF](./javascript/js-xss-csrf.md)
-
+	- [x] [get和post的区别](./javascript/base/get-post.md)
+	- [x] [ajax请求详解](./javascript/base/ajax.md)
+	- [x] [深复制与浅复制](./javascript/base/clone.md)
+- [x] js进阶之路
+	- [x] [认识和使用Promise](./javascript/upgrade/promise.md)
 
 ## Node
 
@@ -101,4 +108,6 @@
 
 ## React
 
-……待续
+- [x] [利用create-react-app快速搭建开发环境](./react/create-react-app.md)
+- [ ] react组件和Props传递
+- [ ] react事件处理
