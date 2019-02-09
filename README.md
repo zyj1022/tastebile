@@ -79,6 +79,11 @@
 - [x] js进阶之路
 	- [x] [认识和使用Promise](./javascript/upgrade/promise.md)
 
+
+## TypeScript
+
+
+
 ## Node
 
 - [x] [node 安装方法](https://github.com/zyj1022/FE-build/blob/master/node.md)
@@ -93,16 +98,16 @@
 
 # 框架部分
 
-## Vue2
+## Vue
 
 - [x] Vue 基本使用
-	- [x] [vue-cli 使用指南](./vue2/vue-cli.md)
-	- [x] [vue-router 使用指南](./vue2/vue-router.md)
-	- [x] [vuex 使用指南](./vue2/vuex.md)
-	- [x] [vue组件之间如何传值](./vue2/vue-props-emit.md)
+	- [x] [vue-cli 使用指南](./vue/vue-cli.md)
+	- [x] [vue-router 使用指南](./vue/vue-router.md)
+	- [x] [vuex 使用指南](./vue/vuex.md)
+	- [x] [vue组件之间如何传值](./vue/vue-props-emit.md)
 
 
-## Angular2
+## Angular
 
 ……待续
 
