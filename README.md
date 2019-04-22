@@ -30,7 +30,7 @@
 	- [x] [纯CSS3绘画之眨眼的螳螂](./css/pretty/css-grasshopper.html)
 	- [x] [纯CSS3绘画之小黄人](./css/pretty/css-minion.html)
 	- [x] [蝙蝠侠LOGO](./css/pretty/css-batman-logo.md)
-- [x] [移动端标签 fixed 的问题](http://www.imeetyou.net/posts/frontend/2017/html-safari-fixed.html)
+- [x] [移动端标签 fixed 的问题](http://zyj1022.github.io/posts/frontend/2017/html-safari-fixed.html)
 
 ## Javascript
 
@@ -51,20 +51,20 @@
 	- [x] 数组排序方法
 - [x] [Javascript 面向对象编程](./javascript/js-oop.md)
 - [x] **Javascript设计模式相关**
-	- [x] [单例模式](http://www.imeetyou.net/posts/frontend/2017/js-dp-singleton.html)
-	- [x] [策略模式](http://www.imeetyou.net/posts/frontend/2017/js-dp-proxy.html)
-	- [x] [代理模式](http://www.imeetyou.net/posts/frontend/2017/js-dp-strategy.html)
-	- [x] [迭代器模式](http://www.imeetyou.net/posts/frontend/2017/js-dp-iterator.html)
-	- [x] [发布/订阅模式](http://www.imeetyou.net/posts/frontend/2017/js-dp-publish-subscribe.html)
+	- [x] [单例模式](http://zyj1022.github.io/posts/frontend/2017/js-dp-singleton.html)
+	- [x] [策略模式](http://zyj1022.github.io/posts/frontend/2017/js-dp-proxy.html)
+	- [x] [代理模式](http://zyj1022.github.io/posts/frontend/2017/js-dp-strategy.html)
+	- [x] [迭代器模式](http://zyj1022.github.io/posts/frontend/2017/js-dp-iterator.html)
+	- [x] [发布/订阅模式](http://zyj1022.github.io/posts/frontend/2017/js-dp-publish-subscribe.html)
 	- [ ] 命令模式
 	- [ ] 组合模式
-	- [x] [模版方法模式](http://www.imeetyou.net/posts/frontend/2017/js-dp-template.html)
-	- [x] [享元模式](http://www.imeetyou.net/posts/frontend/2017/js-dp-flyweight.html)
+	- [x] [模版方法模式](http://zyj1022.github.io/posts/frontend/2017/js-dp-template.html)
+	- [x] [享元模式](http://zyj1022.github.io/posts/frontend/2017/js-dp-flyweight.html)
 	- [x] [职责链模式](./javascript/design-patterns/chain-of-responsibility/)
-	- [x] [中介者模式](http://www.imeetyou.net/posts/frontend/2017/js-dp-mediator.html)
-	- [x] [装饰者模式](http://www.imeetyou.net/posts/frontend/2017/js-dp-decorator.html)
+	- [x] [中介者模式](http://zyj1022.github.io/posts/frontend/2017/js-dp-mediator.html)
+	- [x] [装饰者模式](http://zyj1022.github.io/posts/frontend/2017/js-dp-decorator.html)
 	- [ ] 状态模式
-	- [x] [适配器模式](http://www.imeetyou.net/posts/frontend/2017/js-dp-adapter.html)
+	- [x] [适配器模式](http://zyj1022.github.io/posts/frontend/2017/js-dp-adapter.html)
 - [x] js常见问题列表
 	- [x] [跨越的几种方法](./javascript/base/cross-document.md)
 	- [x] [call和apply、bind的用法及区别](./javascript/base/call-apply-bind.md)
@@ -78,6 +78,11 @@
 	- [x] [深复制与浅复制](./javascript/base/clone.md)
 - [x] js进阶之路
 	- [x] [认识和使用Promise](./javascript/upgrade/promise.md)
+
+
+## TypeScript
+
+
 
 ## Node
 
@@ -93,16 +98,16 @@
 
 # 框架部分
 
-## Vue2
+## Vue
 
 - [x] Vue 基本使用
-	- [x] [vue-cli 使用指南](./vue2/vue-cli.md)
-	- [x] [vue-router 使用指南](./vue2/vue-router.md)
-	- [x] [vuex 使用指南](./vue2/vuex.md)
-	- [x] [vue组件之间如何传值](./vue2/vue-props-emit.md)
+	- [x] [vue-cli 使用指南](./vue/vue-cli.md)
+	- [x] [vue-router 使用指南](./vue/vue-router.md)
+	- [x] [vuex 使用指南](./vue/vuex.md)
+	- [x] [vue组件之间如何传值](./vue/vue-props-emit.md)
 
 
-## Angular2
+## Angular
 
 ……待续
 
