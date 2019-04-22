@@ -109,5 +109,5 @@
 ## React
 
 - [x] [利用create-react-app快速搭建开发环境](./react/create-react-app.md)
-- [ ] react组件和Props传递
-- [ ] react事件处理
+- [x] [父组件调用子组件的方法](./react/react-parent-to-child.md)
+- [x] [子组件调用父组件中的方法](./react/react-child-to-parent.md)
