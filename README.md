@@ -116,6 +116,8 @@
 - [x] [利用create-react-app快速搭建开发环境](./react/create-react-app.md)
 - [x] [父组件调用子组件的方法](./react/react-parent-to-child.md)
 - [x] [子组件调用父组件中的方法](./react/react-child-to-parent.md)
+- [x] [React使用mobx管理状态方法](./react/mobx-mobx-react.md)
+- [x] [mobx-react-lite 基于 Hook API 的使用](./react/mobx-react-lite-hook.md)
 
 
 ## 其它部分
