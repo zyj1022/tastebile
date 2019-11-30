@@ -107,13 +107,10 @@
 	- [x] [vue组件之间如何传值](./vue/vue-props-emit.md)
 
 
-## Angular
-
-……待续
-
 ## React
 
 - [x] [利用create-react-app快速搭建开发环境](./react/create-react-app.md)
+- [x] [create-react-app创建的项目中serviceWorker.js文件的作用](./react/serviceWorker.md)
 - [x] [父组件调用子组件的方法](./react/react-parent-to-child.md)
 - [x] [子组件调用父组件中的方法](./react/react-child-to-parent.md)
 - [x] [React使用mobx管理状态方法](./react/mobx-mobx-react.md)
@@ -123,3 +120,4 @@
 ## 其它部分
 
 - [x] [GitHub项目初始化建议](./other/github-readme.md)
+- [x] [如何定制一个VSCode个性化主题](./other/vscode-theme.md)
