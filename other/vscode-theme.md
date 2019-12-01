@@ -81,6 +81,8 @@ vsce package
 
 打包生成了`.vsix`文件
 
+![vsix view](../assets/vsix.png)
+
 打开 VScode 点击左侧插件图标，在插件部分右上角点击 `...`, 在下拉列表里会有 从VSIX安装，
 可以安装你已经打包📦好的文件。
 
