@@ -148,7 +148,7 @@ colors节点的内容直接通过键值对参数描述，以下列举几个参�
 | 参数名     |    作用 |
 | :-------- | --------:|
 |activityBar.background	|活动栏背景色 |
-|activityBar.foreground	活动栏前景色(例如用于图标)|
+|activityBar.foreground	|活动栏前景色(例如用于图标)|
 |editor.background	|编辑器背景颜色|
 |editor.foreground	|编辑器默认前景色|
 |editor.findMatchBackground	|当前搜索匹配项的颜色|
@@ -171,6 +171,8 @@ colors节点的内容直接通过键值对参数描述，以下列举几个参�
 |tab.activeForeground	|活动组中活动选项卡的前景色|
 |tab.inactiveBackground	|非活动选项卡的背景色|
 |tab.inactiveForeground	|活动组中非活动选项卡的前景色|
+|panel.border   | 命令行区域边框线颜色  |
+|editorGroup.border   | 多区域编辑边框线颜色  |
 
 不限于以上自定义部分，读者可以自行查找。
 
