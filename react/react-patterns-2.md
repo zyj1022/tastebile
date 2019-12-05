@@ -14,7 +14,7 @@
 - 组合组件 ；
 - 继承模式。
 
-为了更好的理解，你可以将相应源码下载下来查看：https://github.com/imalextu/learn-react-patterns
+为了更好的理解，你可以将相应源码下载下来查看：[源码](https://github.com/imalextu/learn-react-patterns)
 
 ## 一、Context模式
 
@@ -37,7 +37,11 @@ const ThemeContext = React.createContext();
 ```
 第二步：生成Provider 和 Consumer
 
-接着，我们用ThemeContext生成两个属性，分别是Provider和Consumer。从字面意思即可理解。Provider供数据提供者使用，Consumer供数据消费者使用。
+接着，我们用ThemeContext生成两个属性，分别是Provider和Consumer。
+从字面意思即可理解。
+
+- Provider 供数据提供者使用
+- Consumer 供数据消费者使用
 
 ```
 const ThemeProvider = ThemeContext.Provider;
@@ -69,7 +73,7 @@ const Page = () => (
 第四步：使用ThemeConsumer给数据接收者
 
 ```
-// 这里演示一个class组件。Counsumer使用了renderProps模式哦。
+// 这里演示一个class组件。Counsumer使用了 renderProps 模式哦。
 class Title extends React.Component {
   render() {
     return (
@@ -101,15 +105,16 @@ const Content = (props, context) => {
   );
 };
 ```
+
 ### 模式所解决的问题
 
 Context 主要应用场景在于很多不同层级的组件需要访问同样一些的数据。如下图，组件a、组件g、组件f需要共享数据，则只需要在最外层套上Provider，需要共享的组件使用Consumer即可
 
+![react-context](../assets/react-context.webp)
+
 使用注意事项
 
 因为 context 会使用参考标识（reference identity）来决定何时进行渲染，这里可能会有一些陷阱，当 provider 的父组件进行重渲染时，可能会在 consumers 组件中触发意外的渲染。举个例子，当每一次 Provider 重渲染时，以下的代码会重渲染所有下面的 consumers 组件，因为 value 属性总是被赋值为新的对象：
-
-![react-context](../assets/react-context.webp)
 
 ```
 class App extends React.Component {
@@ -148,7 +153,8 @@ class App extends React.Component {
 ### 概念介绍
 
 Compound Component 翻译为组合组件。借用组合组件，使用者只需要传递子组件，子组件所需要的props在父组件会封装好，引用子组件的时候就没必要传递所有props了。
-组合组件核心的两个方法是React.Children.map和React.cloneElement。React.Children.map 用来遍历获得组件的子元素。React.cloneElement 则用来复制元素，这个函数第一个参数就是被复制的元素，第二个参数可以增加新产生元素的 props ，我们就是利用这个函数，把想要的 props 传入子元素。
+
+组合组件核心的两个方法是 `React.Children.map` 和 `React.cloneElement`。`React.Children.map` 用来遍历获得组件的子元素。React.cloneElement 则用来复制元素，这个函数第一个参数就是被复制的元素，第二个参数可以增加新产生元素的 props ，我们就是利用这个函数，把想要的 props 传入子元素。
 
 ### 示例
 
@@ -164,7 +170,7 @@ Compound Component 翻译为组合组件。借用组合组件，使用者只需�
 <TabItem active={false} onClick={this.onClick}>Three</TabItem>
 ```
 
-每次增加一个TabItem，是不是都需要传递active和onClick，这太繁琐了！我们用compound模式解决这个问题。
+每次增加一个TabItem，是不是都需要传递active和onClick，这太繁琐了！我们用 compound 模式解决这个问题。
 ```
 const TabItem = (props) => {
   const {active, onClick} = props;
@@ -233,14 +239,15 @@ class Tabs extends React.Component {
 
 ### 模式所解决的问题
 
-组合组件设计模式一般应用在一些共享组件上。如 select 和 option , Tab 和TabItem 等，通过组合组件，使用者只需要传递子组件，子组件所需要的 props 在父组件会封装好，引用子组件的时候就没必要传递所有 props 了。
+组合组件设计模式一般应用在一些共享组件上。如 `select` 和 `option` , `Tab` 和 `TabItem` 等，通过组合组件，使用者只需要传递子组件，子组件所需要的 props 在父组件会封装好，引用子组件的时候就没必要传递所有 props 了。
+
 我们可以在共享的组件中运用这种模式，简化组件使用者的调用方式，antd 当中你就能看到许多组合组件的使用。
 
 ## 三、继承模式
 
 ### 概念介绍
 
-说了那么多的模式，我们最后来谈谈很熟悉的继承模式。如果组件定义为class组件，那么我们当然可以使用继承的模式来实现组件的复用。
+说了那么多的模式，我们最后来谈谈很熟悉的继承模式。如果组件定义为 class 组件，那么我们当然可以使用继承的模式来实现组件的复用。
 
 ### 示例
 
@@ -272,7 +279,7 @@ class Pc extends Base {
 }
 ```
 
-我们具体看下Provider组件是如何定义的。通过这段代码props.children(allProps),我们调用了传入的函数。
+我们具体看下 `Provider` 组件是如何定义的。通过这段代码 `props.children(allProps)` ,我们调用了传入的函数。
 
 ```
 const Provider = (props) => {
@@ -286,19 +293,25 @@ const Provider = (props) => {
   }
 }
 ```
-我们可以看到Mobile和Pc共享了Base的逻辑，实现了复用。
+
+我们可以看到 Mobile 和 Pc 共享了 Base 的逻辑，实现了复用。
 
 ### 组合与继承
 
 如果你刚使用React，可能继承的方式对大家来说更熟悉的。因为继承看起来很方便，也很好理解。但是React官方并不推荐使用继承，因为各种组合的模式完全足够使用，上面的例子我们完全可以用组合的思想去实现。
 
-为什么不推荐使用继承？继承有两个缺点，其一是，父类的属性和方法，子类是无条件继承的。也就是说，不管子类愿意不愿意，都必须继承父类所有的属性和方法，这样就不够灵活了。其二是，js中class并不直接支持多继承。这两个缺点使得继承相对于组合组件缺少了灵活性以及可扩展性。
+为什么不推荐使用继承？继承有两个缺点
+，
+- 其一是，父类的属性和方法，子类是无条件继承的。也就是说，不管子类愿意不愿意，都必须继承父类所有的属性和方法，这样就不够灵活了。
+- 其二是，js中class并不直接支持多继承。这两个缺点使得继承相对于组合组件缺少了灵活性以及可扩展性。
 
 请记住，组合优于继承！组件的复用请第一时间想到使用组合而非继承。
 
 ## 尾声
 
-到这里，六种React组件设计模式就就讲完了。这六种模式已经覆盖了绝大多数的组件使用场景。随着React的更新，也许将来会有更多组件设计模式出现。但是思想都是想通的，比如“责任分离”、“不要重复自己”（DRY，Don't Repeat Yourself) 等等。明白这些代码设计思想，将来我们也能很快地掌握新的组件设计模式。
+到这里，六种React组件设计模式就就讲完了。这六种模式已经覆盖了绝大多数的组件使用场景。随着React的更新，也许将来会有更多组件设计模式出现。
+
+但是思想都是想通的，比如“责任分离”、“不要重复自己”（DRY，Don't Repeat Yourself) 等等。明白这些代码设计思想，将来我们也能很快地掌握新的组件设计模式。
 
 
 
