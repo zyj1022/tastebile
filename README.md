@@ -82,7 +82,7 @@
 
 ## TypeScript
 
-
+- [x] [tsconfig.json配置注解及常用](./typescript/tsconfig-json.md)
 
 ## Node
 
@@ -115,6 +115,8 @@
 - [x] [子组件调用父组件中的方法](./react/react-child-to-parent.md)
 - [x] [React使用mobx管理状态方法](./react/mobx-mobx-react.md)
 - [x] [mobx-react-lite 基于 Hook API 的使用](./react/mobx-react-lite-hook.md)
+- [x] [React组件设计模式（上）](./react/react-patterns-1.md)
+- [x] [React组件设计模式（下）](./react/react-patterns-2.md)
 
 
 ## 其它部分
