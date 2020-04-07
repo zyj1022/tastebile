@@ -78,6 +78,7 @@
 	- [x] [深复制与浅复制](./javascript/base/clone.md)
 - [x] js进阶之路
 	- [x] [认识和使用Promise](./javascript/upgrade/promise.md)
+	- [ ] [ES6 重点学习](././javascript/es6/es6-hard.md)
 
 
 ## TypeScript
@@ -117,9 +118,21 @@
 - [x] [mobx-react-lite 基于 Hook API 的使用](./react/mobx-react-lite-hook.md)
 - [x] [React组件设计模式（上）](./react/react-patterns-1.md)
 - [x] [React组件设计模式（下）](./react/react-patterns-2.md)
+- [x] [React中使用postMessage解决跨域传值及样式更改](./react/react-postMessage.md)
+- [x] [在本地调试React外部依赖的正确姿势](./react/react-local-link.md)
+- [ ] [React hooks 使用指南](./react/react-hooks-base.md)
+- [ ] [React hooks跨组件传值解决方案](./react/react-hooks-value.md)
+- [ ] [React 函数式组件性能优化指南](./react/reac-function-optimize.md)
 
 
 ## 其它部分
 
+### 函数式编程
+
+- [x] [JavaScript 轻量级函数式编程](https://github.com/ikcamp/Functional-Light-JS)
+
+### 未分类
+
 - [x] [GitHub项目初始化建议](./other/github-readme.md)
 - [x] [如何定制一个VSCode个性化主题](./other/vscode-theme.md)
+- [ ] [axios全局错误包装方案](./other/axios-err.md)
