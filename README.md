@@ -120,9 +120,9 @@
 - [x] [React组件设计模式（下）](./react/react-patterns-2.md)
 - [x] [React中使用postMessage解决跨域传值及样式更改](./react/react-postMessage.md)
 - [x] [在本地调试React外部依赖的正确姿势](./react/react-local-link.md)
-- [ ] [React hooks 使用指南](./react/react-hooks-base.md)
+- [x] [React hooks 使用指南](./react/react-hooks-base.md)
 - [ ] [React hooks跨组件传值解决方案](./react/react-hooks-value.md)
-- [ ] [React 函数式组件性能优化指南](./react/reac-function-optimize.md)
+- [x] [React 函数式组件性能优化指南](./react/reac-function-optimize.md)
 
 
 ## 其它部分
@@ -136,3 +136,4 @@
 - [x] [GitHub项目初始化建议](./other/github-readme.md)
 - [x] [如何定制一个VSCode个性化主题](./other/vscode-theme.md)
 - [ ] [axios全局错误包装方案](./other/axios-err.md)
+- [x] [JAMStack入门指南](./other/jamstack.md)
