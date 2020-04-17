@@ -96,6 +96,7 @@
 - [x] [grunt 入门指南](https://github.com/zyj1022/FE-build/blob/master/grunt.md)
 - [x] [gulp 入门指南](https://github.com/zyj1022/FE-build/blob/master/gulp.md)
 - [x] [webpack 入门指南](https://github.com/zyj1022/FE-build/blob/master/webpack.md)
+- [x] [webpack4 optimization 介绍](./packaging/webpack4-optimization.md)
 
 # 框架部分
 
