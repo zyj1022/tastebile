@@ -97,6 +97,7 @@
 - [x] [gulp 入门指南](https://github.com/zyj1022/FE-build/blob/master/gulp.md)
 - [x] [webpack 入门指南](https://github.com/zyj1022/FE-build/blob/master/webpack.md)
 - [x] [webpack4 optimization 介绍](./packaging/webpack4-optimization.md)
+- [x] [ant3.x webpack打包被迫引进全部icons,如何按需引入？](./packaging/webpack-ant3x-import.md)
 
 # 框架部分
 
