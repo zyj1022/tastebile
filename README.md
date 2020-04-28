@@ -90,7 +90,7 @@
 - [x] [node 安装方法](https://github.com/zyj1022/FE-build/blob/master/node.md)
 - [x] [npm 介绍](https://github.com/zyj1022/FE-build/blob/master/npm.md)
 
-## 前端工程构建入门指南
+## 前端工程构建
 
 - [x] [bower 入门指南](https://github.com/zyj1022/FE-build/blob/master/bower.md)
 - [x] [grunt 入门指南](https://github.com/zyj1022/FE-build/blob/master/grunt.md)
@@ -98,6 +98,9 @@
 - [x] [webpack 入门指南](https://github.com/zyj1022/FE-build/blob/master/webpack.md)
 - [x] [webpack4 optimization 介绍](./packaging/webpack4-optimization.md)
 - [x] [ant3.x webpack打包被迫引进全部icons,如何按需引入？](./packaging/webpack-ant3x-import.md)
+- [x] [WebPack 警告WARNING in asset size limit](./packaging/webpack-size-limit.md)
+- [x] [Entrypoint mini-css-extract-plugin警告解决](./packaging/mini-css-extract-plugin.md)
+- [x] [webpack 打包加速指南](./packaging/webpack-build-faster.md)
 
 # 框架部分
 
