@@ -101,6 +101,7 @@
 - [x] [WebPack 警告WARNING in asset size limit](./packaging/webpack-size-limit.md)
 - [x] [Entrypoint mini-css-extract-plugin警告解决](./packaging/mini-css-extract-plugin.md)
 - [x] [webpack 打包加速指南](./packaging/webpack-build-faster.md)
+- [x] [webpack 打包优化续篇](./packaging/webpack-build-faster2.md)
 
 # 框架部分
 
@@ -128,6 +129,7 @@
 - [x] [React hooks 使用指南](./react/react-hooks-base.md)
 - [ ] [React hooks跨组件传值解决方案](./react/react-hooks-value.md)
 - [x] [React 函数式组件性能优化指南](./react/reac-function-optimize.md)
+- [x] [函数式组件与类组件有何不同](./react/react-funciton-class.md)
 
 
 ## 其它部分
