@@ -144,5 +144,5 @@
 - [x] [GitHub项目初始化建议](./other/github-readme.md)
 - [x] [如何定制一个VSCode个性化主题](./other/vscode-theme.md)
 - [ ] [axios全局错误包装方案](./other/axios-err.md)
-- [x] [JAMStack入门指南](./other/jamstack.md)
+- [x] [JAMStack 简介及使用分享](./other/jamstack.md)
 - [x] [git commit 规范指南](./other/git-commit-guide.md)
