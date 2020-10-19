@@ -131,6 +131,10 @@
 - [x] [React 函数式组件性能优化指南](./react/reac-function-optimize.md)
 - [x] [函数式组件与类组件有何不同](./react/react-funciton-class.md)
 - [x] [userCallback & userEffect 使用注意事项](./react/react-userCallback-userEffect.md)
+- [x] [用testing-library编写react测试用例](./react/testing-library-react.md)
+
+## React 踩坑报错记录
+- [x] [validateDOMNesting(...): <div> cannot appear as a descendant of <p>](./react/validateDOMNesting.md)
 
 
 ## 其它部分
