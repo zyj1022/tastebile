@@ -115,6 +115,8 @@ vsce publish 1.0.1
 
 > 在线编辑配色主题 <http://tmtheme-editor.herokuapp.com/#!/editor/theme/Monokai>
 
+> 在线定制配色主题 <https://themes.vscode.one/> 【这个比较👍🏻~】
+
 在第二部分用脚手架生成基本的插件代码里打开目录,以我自定义主题为例
 
 ```
